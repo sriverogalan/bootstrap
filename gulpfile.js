@@ -11,9 +11,6 @@ function buildStyles2() {
     return gulp.src('./scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
-}
-   
-
-
+} 
 exports.buildStyles  = buildStyles
-exports.buildStyles2 = buildStyles2 
+exports.compila = buildStyles2 
