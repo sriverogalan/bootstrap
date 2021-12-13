@@ -10,10 +10,10 @@ function buildStyles2() {
 } 
 
 function copy() {
-    return gulp.src('./lib/bootstrap/dist/js/bootstrap.bundle.js')
+    return gulp.src('./node_modules/bootsrap/dist/js/*')
         .pipe(gulp.dest('./js'));
 } 
 
 exports.compila = buildStyles2  
 exports.copy = copy  
-exports.build = series(buildStyles2,copy)
+exports.compila2 = series(buildStyles2,copy)
