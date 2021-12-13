@@ -1,7 +1,7 @@
 const { series } = require('gulp');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));  
-const { series } = require('gulp')
+ 
 
 function buildStyles2() {
     return gulp.src('./scss/**/*.scss')
@@ -10,10 +10,10 @@ function buildStyles2() {
 } 
 
 function copy() {
-    return gulp.src('./node_modules/bootsrap/dist/js/*')
+    return gulp.src('./lib/bootstrap/dist/js/*')
         .pipe(gulp.dest('./js'));
 } 
 
-exports.compila = buildStyles2  
+exports.compila = buildStyles2 
 exports.copy = copy  
-exports.compila2 = series(buildStyles2,copy)
+exports.build = series(buildStyles2,copy);
